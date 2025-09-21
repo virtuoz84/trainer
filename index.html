@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CELPIP Reading Test Simulator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CELPIP Reading Test Simulator</h1>
+            <div class="timer-container">
+                <span>Time Remaining: </span>
+                <span id="timer">47:00</span>
+            </div>
+        </header>
+
+        <nav class="part-navigation">
+            <button class="nav-btn active" data-part="1">Part 1</button>
+            <button class="nav-btn" data-part="2">Part 2</button>
+            <button class="nav-btn" data-part="3">Part 3</button>
+            <button class="nav-btn" data-part="4">Part 4</button>
+        </nav>
+
+        <main>
+            <div id="part-1" class="test-part active">
+                <div class="reading-content">
+                    <h2>Reading Part 1: Reading Correspondence</h2>
+                    <div id="part1-content"></div>
+                </div>
+                <div class="questions-container" id="part1-questions"></div>
+            </div>
+
+            <div id="part-2" class="test-part">
+                <div class="reading-content">
+                    <h2>Reading Part 2: Reading to Apply a Diagram</h2>
+                    <div id="part2-content"></div>
+                </div>
+                <div class="questions-container" id="part2-questions"></div>
+            </div>
+
+            <div id="part-3" class="test-part">
+                <div class="reading-content">
+                    <h2>Reading Part 3: Reading for Information</h2>
+                    <div id="part3-content"></div>
+                </div>
+                <div class="questions-container" id="part3-questions"></div>
+            </div>
+
+            <div id="part-4" class="test-part">
+                <div class="reading-content">
+                    <h2>Reading Part 4: Reading for Viewpoints</h2>
+                    <div id="part4-content"></div>
+                </div>
+                <div class="questions-container" id="part4-questions"></div>
+            </div>
+        </main>
+
+        <div class="controls">
+            <button id="prev-btn" class="control-btn">Previous</button>
+            <button id="next-btn" class="control-btn">Next</button>
+            <button id="check-answers" class="control-btn primary">Check Answers</button>
+        </div>
+
+        <div id="results-modal" class="modal">
+            <div class="modal-content">
+                <h2>Test Results</h2>
+                <div id="results-content"></div>
+                <button id="close-results" class="control-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/test-data.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
