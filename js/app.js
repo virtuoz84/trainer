@@ -46,25 +46,29 @@ class CELPIPTest {
         });
     }
 
-    switchPart(partNumber) {
-        // Hide all parts
-        document.querySelectorAll('.test-part').forEach(part => {
-            part.classList.remove('active');
-        });
+// В методе switchPart добавьте вызов таймера:
+switchPart(partNumber) {
+    // Hide all parts
+    document.querySelectorAll('.test-part').forEach(part => {
+        part.classList.remove('active');
+    });
 
-        // Deactivate all nav buttons
-        document.querySelectorAll('.nav-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
+    // Deactivate all nav buttons
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
 
-        // Show selected part
-        document.getElementById(`part-${partNumber}`).classList.add('active');
-        
-        // Activate corresponding nav button
-        document.querySelector(`.nav-btn[data-part="${partNumber}"]`).classList.add('active');
-        
-        this.currentPart = partNumber;
-    }
+    // Show selected part
+    document.getElementById(`part-${partNumber}`).classList.add('active');
+    
+    // Activate corresponding nav button
+    document.querySelector(`.nav-btn[data-part="${partNumber}"]`).classList.add('active');
+    
+    this.currentPart = partNumber;
+    
+    // Update timer for the current part
+    testTimer.switchPart(partNumber);
+}
 
     previousPart() {
         if (this.currentPart > 1) {
