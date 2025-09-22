@@ -16,6 +16,7 @@ class TestTimer {
         };
         this.timerInterval = null;
         this.isRunning = false;
+        this.updateDisplay();
     }
 
     start() {
