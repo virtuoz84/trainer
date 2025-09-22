@@ -11,20 +11,26 @@
         <header>
             <h1>CELPIP Reading Test Simulator</h1>
             <div class="timer-container">
-                <span>Time Remaining: </span>
-                <span id="timer">47:00</span>
+                <span>Total Time: </span>
+                <span id="global-timer">47:00</span>
+                <span class="part-timer">Current Part: </span>
+                <span id="part-timer">11:00</span>
             </div>
         </header>
 
         <nav class="part-navigation">
-            <button class="nav-btn active" data-part="1">Part 1</button>
-            <button class="nav-btn" data-part="2">Part 2</button>
-            <button class="nav-btn" data-part="3">Part 3</button>
-            <button class="nav-btn" data-part="4">Part 4</button>
+            <button class="nav-btn active" data-part="1">Part 1 (11:00)</button>
+            <button class="nav-btn" data-part="2">Part 2 (09:00)</button>
+            <button class="nav-btn" data-part="3">Part 3 (13:00)</button>
+            <button class="nav-btn" data-part="4">Part 4 (14:00)</button>
         </nav>
 
         <main>
             <div id="part-1" class="test-part active">
+                <div class="part-timer-display">
+                    <span>Part 1 Time: </span>
+                    <span id="part1-timer">11:00</span>
+                </div>
                 <div class="reading-content">
                     <h2>Reading Part 1: Reading Correspondence</h2>
                     <div id="part1-content"></div>
@@ -33,6 +39,10 @@
             </div>
 
             <div id="part-2" class="test-part">
+                <div class="part-timer-display">
+                    <span>Part 2 Time: </span>
+                    <span id="part2-timer">09:00</span>
+                </div>
                 <div class="reading-content">
                     <h2>Reading Part 2: Reading to Apply a Diagram</h2>
                     <div id="part2-content"></div>
@@ -41,6 +51,10 @@
             </div>
 
             <div id="part-3" class="test-part">
+                <div class="part-timer-display">
+                    <span>Part 3 Time: </span>
+                    <span id="part3-timer">13:00</span>
+                </div>
                 <div class="reading-content">
                     <h2>Reading Part 3: Reading for Information</h2>
                     <div id="part3-content"></div>
@@ -49,6 +63,10 @@
             </div>
 
             <div id="part-4" class="test-part">
+                <div class="part-timer-display">
+                    <span>Part 4 Time: </span>
+                    <span id="part4-timer">14:00</span>
+                </div>
                 <div class="reading-content">
                     <h2>Reading Part 4: Reading for Viewpoints</h2>
                     <div id="part4-content"></div>
