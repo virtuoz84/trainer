@@ -10,6 +10,7 @@ class CELPIPTest {
         this.initializeEventListeners();
         this.loadTestData();
         testTimer.updateDisplay();
+        testTimer.start();
     }
 
     initializeEventListeners() {
@@ -244,5 +245,4 @@ switchPart(partNumber) {
 // Initialize the test when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     const test = new CELPIPTest();
-    testTimer.start();
 });
